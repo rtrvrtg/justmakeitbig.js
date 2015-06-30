@@ -45,6 +45,10 @@ Returns nothing.
 
 ## Changelog
 
+### v0.1.1
+
+Fixed fallback bug
+
 ### v0.1
 
 Initial commit

@@ -1,4 +1,7 @@
-
+/**
+ * JustMakeItBig.js
+ * v0.1.1
+ */
 
 var JustMakeItBig = {
   // HTML5 Fullscreen API
@@ -60,14 +63,14 @@ var JustMakeItBig = {
     _keyupAction: function(e){
       // ESC key to close full page
       if (e.which == 27) {
-        _fullpage.exitFullPage();
+        JustMakeItBig._fullpage.exitFullPage();
       }
     },
     _attachEvents: function(){
-      $(document).bind('keyup', JustMakeItBig.fullpage._keyupAction);
+      $(document).bind('keyup', JustMakeItBig._fullpage._keyupAction);
     },
     _detachEvents: function(){
-      $(document).unbind('keyup', JustMakeItBig.fullpage._keyupAction);
+      $(document).unbind('keyup', JustMakeItBig._fullpage._keyupAction);
     },
     canFullPage: function(){
       return true;
