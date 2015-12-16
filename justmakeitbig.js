@@ -1,6 +1,6 @@
 /**
  * JustMakeItBig.js
- * v0.1.2
+ * v0.1.4
  */
 
 (function($){
@@ -38,7 +38,9 @@ var JustMakeItBig = {
       } else if (elem.webkitRequestFullScreen) {
         elem.webkitRequestFullScreen();
       }
-      whenToggled(true);
+      if (!!whenToggled && $.isFunction(whenToggled)) {
+        whenToggled(true);
+      }
     },
     exitFullScreen: function(whenToggled){
       if(document.exitFullscreen) {
@@ -52,7 +54,9 @@ var JustMakeItBig = {
       } else if(document.webkitCancelFullScreen) {
         document.webkitCancelFullScreen();
       }
-      whenToggled(false);
+      if (!!whenToggled && $.isFunction(whenToggled)) {
+        whenToggled(false);
+      }
     }
   },
 
@@ -106,9 +110,11 @@ var JustMakeItBig = {
       toggleElement.focus();
       JustMakeItBig._fullpage._attachEvents();
       $(document).scrollTop(0);
-      whenToggled(true);
+      if (!!whenToggled && $.isFunction(whenToggled)) {
+        whenToggled(true);
+      }
     },
-    exitFullPage: function(toggleElement){
+    exitFullPage: function(elem, toggleElement, whenToggled){
       JustMakeItBig._fullpage._detachEvents();
       $(document).find('[data-justmakeitbig-full-page-elem]').each(function(){
         $(this).css(
@@ -118,7 +124,9 @@ var JustMakeItBig = {
       $('body').css('overflow', 'auto');
       toggleElement.focus();
       $(document).scrollTop();
-      whenToggled(false);
+      if (!!whenToggled && $.isFunction(whenToggled)) {
+        whenToggled(false);
+      }
     }
   },
   // API function: can display this in full screen
@@ -143,7 +151,9 @@ var JustMakeItBig = {
     if (!!elem) {
       if (JustMakeItBig._fullscreen.canFullScreen()) {
         if (JustMakeItBig._fullscreen.isFullScreen()) {
-          JustMakeItBig._fullscreen.exitFullScreen(whenToggled);
+          JustMakeItBig._fullscreen.exitFullScreen(
+            whenToggled
+          );
         }
         else {
           JustMakeItBig._fullscreen.enterFullScreen(

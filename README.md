@@ -49,6 +49,10 @@ Returns nothing.
 
 ## Changelog
 
+### v0.1.4
+
+Fix some API inconsistencies
+
 ### v0.1.3
 
 Expose JustMakeItBig.isFullscreen
@@ -63,4 +67,4 @@ Fixed fallback bug
 
 ### v0.1
 
-Initial commit
+Initial release
