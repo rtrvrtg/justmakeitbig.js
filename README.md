@@ -32,6 +32,12 @@ Takes no parameters.
 
 Returns `TRUE` if it supports either HTML5 fullscreen API or fallback, `FALSE` otherwise.
 
+### JustMakeItBig.isFullscreen
+
+Takes no parameters.
+
+Returns `TRUE` if it is in either native or fallback fullscreen, `FALSE` otherwise.
+
 ### JustMakeItBig.toggle
 
 Takes two parameters:
@@ -42,6 +48,10 @@ Takes two parameters:
 Returns nothing.
 
 ## Changelog
+
+### v0.1.3
+
+Expose JustMakeItBig.isFullscreen
 
 ### v0.1.2
 

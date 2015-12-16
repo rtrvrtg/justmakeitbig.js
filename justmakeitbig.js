@@ -125,6 +125,17 @@ var JustMakeItBig = {
   canFullscreen: function(){
     return JustMakeItBig._fullscreen.canFullScreen() || JustMakeItBig._fullpage.canFullPage();
   },
+  // API function: determine if we are in fullscreen
+  isFullscreen: function(){
+    if (JustMakeItBig._fullscreen.canFullScreen()) {    
+      return JustMakeItBig._fullscreen.isFullScreen();   
+    }    
+    if (JustMakeItBig._fullpage.canFullPage()) {   
+      return JustMakeItBig._fullpage.isFullPage();   
+    }    
+    return false;
+  },
+  // API function: toggle fullscreen
   toggle: function(elem, toggleElement, whenToggled){
     if (!whenToggled) {
       whenToggled = function(){};
