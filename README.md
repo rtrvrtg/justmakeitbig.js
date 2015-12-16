@@ -12,8 +12,6 @@ Faux fullscreen fallback inspired by, but not a direct implementation of, the fu
 
 MIT
 
-@TODO: Set up a LICENSE file
-
 ## Requirements
 
 * jQuery
@@ -44,6 +42,10 @@ Takes two parameters:
 Returns nothing.
 
 ## Changelog
+
+### v0.1.2
+
+Wrap in jQuery initialiser
 
 ### v0.1.1
 

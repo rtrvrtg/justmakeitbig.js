@@ -1,7 +1,9 @@
 /**
  * JustMakeItBig.js
- * v0.1.1
+ * v0.1.2
  */
+
+(function($){
 
 var JustMakeItBig = {
   // HTML5 Fullscreen API
@@ -158,3 +160,7 @@ var JustMakeItBig = {
     }
   }
 };
+
+window.JustMakeItBig = JustMakeItBig;
+
+})(jQuery);
